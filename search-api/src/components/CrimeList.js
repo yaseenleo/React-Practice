@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 
-export default class PoliceList extends Component {
+export default class CrimeList extends Component {
 
     state = {
         loading: true,
@@ -9,10 +9,10 @@ export default class PoliceList extends Component {
     }
     async componentDidMount() {
         console.log("hello")
-        const url = "https://data.police.uk/api/forces";
+        const url = "https://data.police.uk/api/crime-categories";
         const response = await fetch(url);     {/*fetch will allow for http request*/}
         const data = await response.json(); {/* it is a async call this will return the json data   */}
-        console.log("police list ====>",data);
+        console.log("crime category ====>", data);
     }
     render() {
 
@@ -22,7 +22,7 @@ export default class PoliceList extends Component {
                     id="outlined-full-width"
                     label="Search Panel"
                     style={{ margin: 8 }}
-                    placeholder="Search Police Men"
+                    placeholder="Search Crime List Category"
                     //   helperText="Full width!"
                     fullWidth
                     margin="normal"

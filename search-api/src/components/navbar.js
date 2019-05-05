@@ -6,7 +6,8 @@ import Tabs from '@material-ui/core/Tabs';
 import NoSsr from '@material-ui/core/NoSsr';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
-import PoliceList from './PoliceList'
+import PoliceList from './PoliceList';
+import CrimeList from './CrimeList'
 
 function TabContainer(props) {
   return (
@@ -55,7 +56,7 @@ class NavTabs extends React.Component {
             </Tabs>
           </AppBar>
           {value === 0 && <TabContainer><PoliceList /></TabContainer>}
-          {value === 1 && <TabContainer>Page Two</TabContainer>}
+          {value === 1 && <TabContainer><CrimeList /></TabContainer>}
           {/* {value === 2 && <TabContainer>Page Three</TabContainer>} */}
         </div>
       </NoSsr>
