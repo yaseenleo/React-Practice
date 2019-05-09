@@ -5,7 +5,7 @@ export default class PoliceList extends Component {
 
     state = {
         loading: true,
-
+        data:[],
     }
     async componentDidMount() {
         console.log("hello")
