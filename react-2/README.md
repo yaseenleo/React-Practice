@@ -1,3 +1,17 @@
+<h1>Practice Info</h1>
+To begin I’ll give a quick definition of what this is in React. this in general refers to a JavaScript element depending on the scope or context of its use. So in React, when we define classes we use methods inside those classes to refer to attributes such as state and props. For our methods to have access to this.state and this.props we need to bind the React component this context to those methods. Binding this to the class methods enables us to access props and state for the component with this.props and this.state. A benefit of using arrow functions is that this is already bound to that function so we don’t need to specify that anywhere else.
+
+<h3>Use arrow functions to avoid binding `this` to methods:</h3>
+Usually when you want to access this inside a class method you would need to bind it to your method
+
+Binding this to handleClick in the constructor allows us to use this.setState from Component inside handleClick. Without this binding, this is re-scoped for handleClick and therefore cannot be used with the setState method.
+
+However using arrow functions makes this whole process unnecessary and leaves your code looking much nicer
+
+The great thing about an arrow function is that this means the same thing within the function body as it does outside of it. Which means that if you use arrow functions within your component’s render, they can access this and this.setState. Doing this I can call handleClick in just one line.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
