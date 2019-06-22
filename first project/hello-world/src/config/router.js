@@ -8,7 +8,8 @@ import Joke from '../screen/Joke';
 import MappingComponent from '../screen/MappingComponent';
 import StatePractice from '../screen/StatePractice';
 import Toggle from '../component/Toggle';
-import Iteration from '../component/iteration'
+import Iteration from '../component/iteration';
+import ConditionalRendering from '../component/conditionalRendering'
 
  
 export default class Routing extends Component {
@@ -30,6 +31,7 @@ export default class Routing extends Component {
                         <li><Link to="/statepractice">State Practice</Link></li>
                         <li><Link to="/toggle">Toggle</Link></li>
                         <li><Link to="iterate">Iteration</Link></li>
+                        <li><Link to="conditionalrendering">Conditional Rendering</Link></li>
                     </ul>
                 </div>
 
@@ -42,6 +44,7 @@ export default class Routing extends Component {
                     <Route path="/statepractice" component={StatePractice} />
                     <Route path="/toggle" component={Toggle} />
                     <Route path="/iterate" component={Iteration} />
+                    <Route path="/conditionalrendering" component={ConditionalRendering} />
                 </Router>
             </div>
         )
