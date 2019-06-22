@@ -1,25 +1,16 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import BulbComponent from './component/BulbComponent'
 
 class App extends Component {
   
-  bulbOff(){
-    <div>
-      
-    </div>
-  }
   
-  bulbOn(){
-    <div>
-
-    </div>
-  }
   render() {
     return (
       <div className="App">
         
-        
+        <BulbComponent />
         
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
